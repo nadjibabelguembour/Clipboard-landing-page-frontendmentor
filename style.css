@@ -1,0 +1,340 @@
+:root{
+/* Primary colors: */
+    --firstColor:hsl(171, 66%, 44%);
+    --secondColor:hsl(233, 100%, 69%);
+   /* neutral colors */
+
+    --darkGray: hsl(210, 10%, 33%);
+    --grayishBlue: hsl(201, 11%, 66%);
+    --fontSize: 18px;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+    font-size: var(--fontSize);
+    line-height: 1.6;
+}
+/*start part1*/
+
+.part1:first-child::after{
+    content: "";
+    background: url("images/bg-header-desktop.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+.container
+{
+    padding-top: 60px;
+    margin: 0px auto;
+}
+.flexCol{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+}
+.logo{
+    margin-bottom: 1.5em;
+}
+.logo svg{
+    height: 100%;
+    width: 100%;
+}
+ h1, h2, h3{
+    color: var(--darkGray);
+    font-weight: 600;
+    text-align: center;
+}
+/* all paragraphs have the same sdtyle */
+p{
+    color: var(--grayishBlue);
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    text-justify: auto;
+}
+.part1 .container .lesBtn{
+    margin-bottom: 4em;
+}
+.green, .blue{
+    height:3.5em;
+    width: 14em;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border: none;
+    outline: none;
+    color: white;
+    margin-top: 1.5em;
+    box-shadow: inset 0px 0px 2px var(--grayishBlue);
+}
+
+.green{
+    background-color: var(--firstColor);
+}
+.blue{
+    background-color: var(--secondColor);
+}
+
+@media (max-width: 767px){
+    .container{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .part1 .container{
+        justify-content: center;
+        align-items: center;
+    }
+    .part1:first-child{
+        background-image: url("images/bg-header-mobile.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .part1 h1{
+        font-size:24px;
+        text-align: center;
+        
+    }
+    .part1,
+    .part1 .lesBtn{
+        justify-content: center;
+        
+    }
+
+    .part1 .lesBtn .green{
+        display: block;
+    } 
+}
+/*end part1*/
+/*-------------------------------------------------------------*/
+
+/*start part2*/
+.part3 .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 30px;
+    flex-wrap: wrap;
+}
+
+.part3 .right p{
+    text-align: left;
+    
+}
+.part3 .right h3{
+    text-align: left;
+    
+}
+.part3 .container .right div{
+    margin-bottom: 2em;
+}
+.part3 .container img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/*end part2*/
+
+.part5 .container img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* start part 7*/
+.part7,
+.part8,
+.part1:nth-child(2){
+    margin-top: 3em;
+}
+.part8{
+    margin-bottom: 3em;
+}
+.part7 .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    gap: 5em;
+}
+.part7 .container .card p{
+    font-size: 14px;
+}
+
+
+
+/* start part 8*/
+.part8 .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+/* end part 8*/
+.part1:nth-child(2){
+    background-image: none;
+}
+
+/* footer */
+footer{
+    background-color: #f2f2f2;
+    padding-bottom: 30px;
+}
+
+footer .container { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+    
+}
+footer .container .right{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+footer .container .carte {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+footer .logoFooter img{
+
+    height: 50px;
+    width: 50px;
+    /* margin-right: 80px; */
+}
+
+
+/*media queries*/
+/*responsive*/
+/* mobile */
+@media(min-width: 768px){
+    .container{
+        width: 750px;
+        padding: 10px;
+        }
+    
+}
+/*medium devices */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+/*larges devices */
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+
+@media (max-width: 767px){
+    .part1:first-child{
+    
+        background-image: url("images/bg-header-mobile.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+   
+}
+/*part 3 reponsive ++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+@media (max-width: 767px){
+    .part1 .container p{
+       padding: 0 2em;
+    } 
+   
+}
+@media (max-width: 767px){
+    .part3 .container{
+        display: flex;
+        flex-direction: column;
+    } 
+    .part3 .container p{
+        text-align: center;
+    }
+    .part3 .container .right{
+        justify-content: center;
+        text-align: center;
+    }
+    .part3 .container img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+/*medium devices */
+@media (max-width: 992px){
+    .part3 .container{
+        display: flex;
+        flex-direction: column;
+    } 
+    .part3 .container .right{
+        justify-content: center;
+        text-align: center;
+    }
+    .part3 .container h3{
+        text-align: center;
+    }
+}
+/*part 7 reponsive ++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media (max-width: 767px){
+    .part7 .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }  
+    .part7 .container .card{
+        justify-content: center;
+        align-items: center;
+        /* margin-bottom: 2em; */
+    }
+}
+/*part 8 reponsive ++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media (max-width: 767px){
+    .part8 .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    } 
+    .part8 .container img{
+        margin-top: 3em;
+        max-width: 100%;
+        max-height: 100%;
+    } 
+   
+}
+/*footer reponsive ++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media (max-width: 767px){
+    footer .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        /* margin: 0 auto; */
+    }
+
+    } 
